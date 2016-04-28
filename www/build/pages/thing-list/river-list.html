@@ -1,0 +1,45 @@
+
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Thing List</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+  <!-- <ion-list>
+    Search
+    <ion-header>
+      <ion-item>
+        <ion-input type="text" placeholder="Search a thing..." (input)="searchThingDB($event, searchKey)"></ion-input>
+      </ion-item>
+    </ion-header>
+    -->
+
+    <!-- <ion-item *ngFor="#thing of things" (click)="itemTapped($event, thing)">
+      <ion-avatar item-left>
+        <img src="https://image.tmdb.org/t/p/w92{{thing.poster_path}}"/>
+      </ion-avatar>
+      <h2>{{thing.original_title}}</h2>
+      <p class="item-description">{{thing.overview}}</p>
+    </ion-item>
+  </ion-list> -->
+
+
+  <ion-list>
+    <button ion-item *ngFor="#thing of things" (click)="itemTapped($event, thing)">
+      <ion-avatar item-left>
+        <img src="./img/{{thing.id}}.png">
+      </ion-avatar>
+        {{thing.name}}
+      <div class="item-note" item-right>
+        {{thing.id}}
+      </div>
+    </button>
+  </ion-list>
+
+  <div *ngIf="selectedThing" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+
+</ion-content>
