@@ -1,0 +1,13 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!thing">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Thing Details</ion-title>
+</ion-navbar>
+<ion-tabs>
+  <!-- <ion-tab [root]="tab1Root" tabTitle="{{thing.name}}" tabIcon="pulse" [root]="tab1Root" [rootParams]="thing"></ion-tab> -->
+  <ion-tab [root]="tab1Root" tabTitle="" tabIcon="pulse" [root]="tab1Root" [rootParams]="thing"></ion-tab>
+
+  <ion-tab [root]="tab2Root" tabTitle="Tab 2" tabIcon="chatbubbles"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Tab 3" tabIcon="cog"></ion-tab>
+</ion-tabs>

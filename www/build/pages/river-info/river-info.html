@@ -1,0 +1,17 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedRiver">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>River Details</ion-title>
+</ion-navbar>
+
+<ion-content>
+ <div *ngIf="selectedRiver" class="selection">
+    <b>{{selectedRiver.name}}</b>
+
+    <div>
+      You navigated here from <b>{{selectedRiver.title}}</b>
+      {{selectedRiver}}
+    </div>
+  </div>
+</ion-content>
